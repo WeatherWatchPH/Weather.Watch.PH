@@ -1,87 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Watch PH</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0077b6, #0096c7);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    img.logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    /* Optional loading animation */
+    .loader {
+      margin-top: 30px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <img class="logo" src="https://via.placeholder.com/100x100?text=Logo" alt="Weather Watch PH Logo">
-    <h1>Weather Watch PH</h1>
-    <div class="hamburger" id="hamburger">&#9776;</div>
-  </header>
+  <!-- Logo -->
+  <img class="logo" src="https://via.placeholder.com/120x120?text=Logo" alt="Weather Watch PH Logo">
 
-  <!-- SIDEBAR MENU -->
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#satellite">Satellite</a>
-        <ul>
-          <li><a href="#pagasa">PAGASA Satellite</a></li>
-          <li><a href="#windy">Windy Satellite</a></li>
-          <li><a href="#zoom">Zoom Earth</a></li>
-        </ul>
-      </li>
-      <li><a href="#cyclone">Tropical Cyclone Bulletin</a></li>
-      <li><a href="#outlook">24-Hour Tropical Cyclone Outlook</a></li>
-      <li><a href="#advisory">Weather Advisory</a></li>
-    </ul>
-  </nav>
+  <!-- Header -->
+  <h1>WEATHER WATCH PH</h1>
+  <p>Redirecting you to PAGASA Satellite...</p>
 
-  <!-- HERO / HOME -->
-  <section id="home" class="hero">
-    <h2>Welcome to Weather Watch PH</h2>
-    <p>Philippines Weather Updates & Alerts</p>
-  </section>
+  <!-- Loader -->
+  <div class="loader"></div>
 
-  <!-- SATELLITE VIEW -->
-  <section id="satellite" class="satellite">
-    <h2>Satellite View</h2>
-    <div id="pagasa">
-      <h3>PAGASA Satellite</h3>
-      <iframe src="https://www.pagasa.dost.gov.ph/weather/satellite" width="100%" height="400" style="border:none;"></iframe>
-    </div>
-    <div id="windy">
-      <h3>Windy Satellite</h3>
-      <iframe src="https://www.windy.com/" width="100%" height="400" style="border:none;"></iframe>
-    </div>
-    <div id="zoom">
-      <h3>Zoom Earth</h3>
-      <iframe src="https://zoom.earth/" width="100%" height="400" style="border:none;"></iframe>
-    </div>
-  </section>
+  <!-- Auto redirect -->
+  <script>
+    window.location.href = "https://www.pagasa.dost.gov.ph/weather/satellite";
+  </script>
 
-  <!-- NEWS SECTIONS -->
-  <section id="cyclone" class="news-section">
-    <h2>Tropical Cyclone Bulletin Updates</h2>
-    <div class="news-grid" id="cyclone-news"></div>
-  </section>
-
-  <section id="outlook" class="news-section">
-    <h2>24-Hour Tropical Cyclone Outlook</h2>
-    <div class="news-grid" id="outlook-news"></div>
-  </section>
-
-  <section id="advisory" class="news-section">
-    <h2>Weather Advisory</h2>
-    <div class="news-grid" id="advisory-news"></div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>&#169; 2025 Weather Watch PH. All Rights Reserved.</p>
-    <div class="social-links">
-      <ul>
-        <li><a href="https://www.facebook.com/WeatherWatchPH" target="_blank">Weather Watch PH (Facebook)</a></li>
-        <li><a href="https://www.facebook.com/PAGASA.DOST.GOV.PH" target="_blank">DOST-PAGASA (Facebook)</a></li>
-        <li><a href="https://www.pagasa.dost.gov.ph" target="_blank">DOST-PAGASA Official Site</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <noscript>
+    <p>
+      Please enable JavaScript to visit PAGASA: 
+      <a href="https://www.pagasa.dost.gov.ph/weather/satellite" target="_blank">Go to PAGASA Satellite</a>
+    </p>
+  </noscript>
 </body>
-              </html>
+</html>
