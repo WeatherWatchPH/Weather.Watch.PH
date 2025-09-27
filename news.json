@@ -1,12 +1,23 @@
 [
   {
-    "title": "Weather Watch PH Launches",
+    "section": "cyclone",
+    "title": "Tropical Storm Alert in Luzon",
     "date": "2025-09-27",
-    "content": "Welcome to Weather Watch PH! Your newest source for weather updates, news, and PAGASA satellite monitoring."
+    "content": "PAGASA issues alert for potential tropical storm affecting Luzon region tonight.",
+    "image": "https://via.placeholder.com/300x200?text=Tropical+Storm"
   },
   {
-    "title": "Rain Showers Expected",
-    "date": "2025-09-28",
-    "content": "PAGASA reports localized thunderstorms may affect parts of Luzon and Visayas this weekend."
+    "section": "outlook",
+    "title": "24-Hour Cyclone Outlook",
+    "date": "2025-09-27",
+    "content": "Monitoring the Pacific Ocean for possible low-pressure areas that could develop into cyclones.",
+    "image": "https://via.placeholder.com/300x200?text=24hr+Outlook"
+  },
+  {
+    "section": "advisory",
+    "title": "Heavy Rain Advisory for Metro Manila",
+    "date": "2025-09-27",
+    "content": "Expect moderate to heavy rainfall with possible flooding in low-lying areas.",
+    "image": "https://via.placeholder.com/300x200?text=Weather+Advisory"
   }
 ]
