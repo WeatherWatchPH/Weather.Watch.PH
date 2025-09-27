@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f9ff;
+  color: #222;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(to right, #0077b6, #0096c7);
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+.site-header img {
+  max-height: 60px;
+}
+
+/* Navigation */
+.site-nav {
+  background: #023e8a;
+  padding: 10px;
+  text-align: center;
+}
+.site-nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Banner */
+.hero {
+  background: url("https://via.placeholder.com/1200x400?text=Weather+Watch+PH+Banner") no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.post-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Satellite */
+.satellite {
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+/* News Section */
+.news-section {
+  padding: 20px;
+}
+.news-grid {
+  display: grid;
+  gap: 20px;
+}
+.news-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.news-card h3 {
+  margin-top: 0;
+}
+
+/* About */
+.about {
+  background: #e0f2fe;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Footer */
+.site-footer {
+  background: #03045e;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+.social-links li {
+  margin: 5px 0;
+}
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.social-links a:hover {
+  text-decoration: underline;
+  }
