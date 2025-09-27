@@ -1,17 +1,28 @@
-// Load news dynamically from news.json
+// Toggle sidebar
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+hamburger.addEventListener("click", () => {
+  sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+});
+
+// Load news from JSON
 fetch("news.json")
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
-    const container = document.getElementById("news-container");
-    data.forEach(news => {
+    const sections = ["cyclone-news","outlook-news","advisory-news"];
+    sections.forEach(section => document.getElementById(section).innerHTML = "");
+    data.forEach(post => {
       const card = document.createElement("div");
-      card.classList.add("news-card");
+      card.className = "news-card";
       card.innerHTML = `
-        <h3>${news.title}</h3>
-        <small>${news.date}</small>
-        <p>${news.content}</p>
+        ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ""}
+        <h3>${post.title}</h3>
+        <small>${post.date}</small>
+        <p>${post.content}</p>
       `;
-      container.appendChild(card);
+      if(post.section === "cyclone") document.getElementById("cyclone-news").appendChild(card);
+      else if(post.section === "outlook") document.getElementById("outlook-news").appendChild(card);
+      else if(post.section === "advisory") document.getElementById("advisory-news").appendChild(card);
     });
   })
-  .catch(error => console.error("Error loading news:", error));
+  .catch(err => console.error("Failed to load news:", err));
